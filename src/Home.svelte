@@ -1,18 +1,15 @@
 <script>
-	import Router from 'svelte-spa-router'
-	import Home from './Home.svelte';
-	
-	const routes = {
-		'*': Home
-	}
+let name =''
 </script>
 
-<main>
-  <Router routes={routes}></Router>
-</main>
+<div class='home'>
+  <input bind:value={name}>
+	<h1>Hello {name}!</h1>
+	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+</div>
 
 <style>
-	main {
+	.home {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
@@ -27,7 +24,7 @@
 	}
 
 	@media (min-width: 640px) {
-		main {
+		.div {
 			max-width: none;
 		}
 	}
